@@ -1,0 +1,32 @@
+@import "../Vars.scss";
+
+.ProductCard {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-items: center;
+  width: 90%;
+  margin: 0 auto;
+
+  &__image {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  &__select {
+    display: flex;
+    justify-content: space-between;
+    margin-top: .25em;
+    padding: 0 .5em .3em;
+    margin-bottom: .3em;
+    border-bottom: 2px solid rgba(0, 0, 0, .4);
+
+    &-price {
+      color: $mainColor;
+    }
+  }
+
+  img {
+    width: 100%;
+  }
+}
