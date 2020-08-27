@@ -6,7 +6,7 @@ import { useSelector } from "react-redux";
 import CartCard from "../components/CartCard";
 const Cart = () => {
   const data = useSelector((store) => store.cartReducer.data);
-  console.log(data);
+  // console.log(data);
   return data.length < 1 ? (
     <div className="Cart">
       <div className="container">
@@ -23,8 +23,8 @@ const Cart = () => {
         <h3>Items añadidos</h3>
       </div>
       <div>
-        {data.map((article) => (
-          <CartCard article={article}/>
+        {data.map((article,index) => (
+          <CartCard article={article} index={index}/>
         ))}
       </div>
     </div>

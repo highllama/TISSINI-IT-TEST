@@ -43,6 +43,24 @@
          align-items: center;
          justify-content: center;
          height: 100%;
+         
+         &-cart {
+            position: relative;
+         }
+         &-cartCount {
+            position: absolute;
+            top: -10px;
+            right: 35%;
+            background-color: $mainColor;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: .8em;
+            color: white;
+         }
          h4 {
             margin: .25em auto auto auto;
             font-weight: 400;

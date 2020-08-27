@@ -1,10 +1,21 @@
 import React from "react";
+//REDUX
+import { useDispatch } from "react-redux";
+import { removeProductAction } from "../redux/cartDuck";
 //STYLE
 import "../assets/styles/components/CartCard.scss";
 
-const CartCard = ({ article }) => {
-  const { imageUrl, name, price } = article.item;
+const CartCard = ({ article , index}) => {
+  const dispatch = useDispatch();
+  const { imageUrl, name, price, _id } = article.item;
   const { size, count } = article;
+
+  const handleDelete = (id) => {
+    dispatch(removeProductAction(id));
+  };
+  
+
+
   return (
     <div className="CartCard">
       <div className="CartCard__image">
@@ -24,7 +35,7 @@ const CartCard = ({ article }) => {
         <br />
         <h2 className="CartCard__total">${price * count}</h2>
         <div>
-          <button>aas</button>
+          <button onClick={() => handleDelete(_id)}>X</button>
         </div>
       </div>
     </div>
