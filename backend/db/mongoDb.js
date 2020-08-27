@@ -7,7 +7,7 @@ mongoose.connection.on("open", () => {
 const connectDb = async ({ dbUser, dbPassword, dbHost, dbName }) => {
   try {
     let uri = `mongodb+srv://${dbUser}:${dbPassword}@${dbHost}/Cluster0?retryWrites=true&w=majority`;
-    console.log(uri)
+    // console.log(uri)
     await mongoose.connect(uri, {
       useNewUrlParser: true,
       useUnifiedTopology: true,
